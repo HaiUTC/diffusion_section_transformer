@@ -1,0 +1,61 @@
+# Phase 3 Configuration (5000-10000 dataset)
+# Medium-scale model with full feature set
+
+model:
+  # Medium model size for good performance
+  d_model: 256
+  n_heads: 8
+  n_layers: 8
+  dropout: 0.1
+
+  # Vision component
+  vision:
+    patch_size: 16
+    image_size: 224
+    channels: 3
+
+  # Structure component
+  structure:
+    vocab_size: 6000 # Large vocabulary
+    max_length: 1024 # Long sequences
+
+  # Layout component
+  layout:
+    max_elements: 32 # Complex layouts
+    geometric_dim: 64
+    class_vocab_size: 200
+
+  # Diffusion settings
+  diffusion:
+    timesteps: 500 # More denoising steps
+    beta_start: 0.0001
+    beta_end: 0.02
+
+training:
+  # Optimized training for larger dataset
+  batch_size: 16
+  learning_rate: 3e-5
+  weight_decay: 0.001
+  epochs: 200
+  warmup_steps: 500
+
+  # Balanced regularization
+  dropout: 0.15
+  label_smoothing: 0.02
+  gradient_clip: 1.0
+
+  # Full data augmentation
+  augmentation:
+    rotation_range: 15
+    brightness_range: 0.2
+    contrast_range: 0.2
+    horizontal_flip: 0.3
+    scale_range: 0.1
+
+validation:
+  split: 0.15
+  patience: 20
+  min_delta: 0.0001
+# Estimated model size: ~20-35M parameters
+# Memory usage: ~800MB-1.2GB
+# Training time: ~45-60 seconds per epoch

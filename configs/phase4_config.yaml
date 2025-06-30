@@ -1,0 +1,63 @@
+# Phase 4 Configuration (10000+ dataset)
+# Full-scale production model with maximum capability
+
+model:
+  # Large model size for production performance
+  d_model: 384
+  n_heads: 12
+  n_layers: 10
+  dropout: 0.05
+
+  # Vision component
+  vision:
+    patch_size: 16
+    image_size: 224
+    channels: 3
+
+  # Structure component
+  structure:
+    vocab_size: 10000 # Full vocabulary
+    max_length: 2048 # Very long sequences
+
+  # Layout component
+  layout:
+    max_elements: 48 # Complex layouts
+    geometric_dim: 96
+    class_vocab_size: 500
+
+  # Diffusion settings
+  diffusion:
+    timesteps: 1000 # Full denoising process
+    beta_start: 0.0001
+    beta_end: 0.02
+
+training:
+  # Production training setup
+  batch_size: 32
+  learning_rate: 2e-5
+  weight_decay: 0.0005
+  epochs: 300
+  warmup_steps: 1000
+
+  # Minimal regularization (model can handle complexity)
+  dropout: 0.1
+  label_smoothing: 0.01
+  gradient_clip: 1.0
+
+  # Comprehensive data augmentation
+  augmentation:
+    rotation_range: 20
+    brightness_range: 0.25
+    contrast_range: 0.25
+    horizontal_flip: 0.4
+    scale_range: 0.15
+    noise_std: 0.01
+    mixup_alpha: 0.2
+
+validation:
+  split: 0.1
+  patience: 25
+  min_delta: 0.00005
+# Estimated model size: ~50-80M parameters
+# Memory usage: ~1.5-2.5GB
+# Training time: ~90-120 seconds per epoch

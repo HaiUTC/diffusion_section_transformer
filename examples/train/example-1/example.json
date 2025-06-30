@@ -1,0 +1,79 @@
+{
+  "id": "unique_example_id",
+  "screenshot": {
+    "path": "example.png",
+    "width": 1920,
+    "height": 824
+  },
+  "structure": {
+    "type": "HTMLObject",
+    "data": {
+      "header.section_header1": {
+        "div.padding-global": {
+          "div.container-large": {
+            "div.padding-section-large": {
+              "div.header1_component": {
+                "div.w-layout-grid.header1_content['d:grid']['col:2']": {
+                  "div.header1_content-left": {
+                    "div.margin-bottom.margin-small": {
+                      "h1.heading-style-h1": {
+                        "text": "Medium length hero heading goes here"
+                      }
+                    },
+                    "p.text-size-medium": {
+                      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+                    },
+                    "div.margin-top.margin-medium": {
+                      "div.button-group['d:flex']": {
+                        "a.button.w-button": { "text": "Button" },
+                        "a.button.is-secondary.w-button": { "text": "Button" }
+                      }
+                    }
+                  },
+                  "div.header1_image-wrapper": {
+                    "img.header1_image": {
+                      "src": "https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "layout": {
+    "type": "SectionLayout",
+    "data": {
+      "structure": {
+        "section@header.section_header1@div.padding-global@div.container-large@div.padding-section-large": {
+          "wrapper@div.header1_component": {
+            "grid@div.w-layout-grid.header1_content": {
+              "column$1": {
+                "wrapper@div.header1_content-left": {
+                  "wrapper@div.margin-bottom.margin-small": {
+                    "heading@h1.heading-style-h1": ""
+                  },
+                  "paragraph@p.text-size-medium": "",
+                  "wrapper@div.margin-top.margin-medium": {
+                    "wrapper@div.button-group": {
+                      "button@a.button.w-button": "",
+                      "button@a.button.is-secondary.w-button": ""
+                    }
+                  }
+                }
+              },
+              "column$2": {
+                "wrapper@div.header1_image-wrapper": {
+                  "image@img.header1_image": ""
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "props": {}
+  }
+}

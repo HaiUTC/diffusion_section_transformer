@@ -1,0 +1,59 @@
+# Phase 1 Configuration (0-2000 dataset)
+# Ultra-lightweight model for proof-of-concept and overfitting prevention
+
+model:
+  # Drastically reduced model size for small dataset
+  d_model: 128
+  n_heads: 4
+  n_layers: 4
+  dropout: 0.2
+
+  # Vision component (simplified)
+  vision:
+    patch_size: 32 # Larger patches = fewer tokens
+    image_size: 224
+    channels: 3
+
+  # Structure component (simplified)
+  structure:
+    vocab_size: 2000 # Reduced vocabulary
+    max_length: 256 # Shorter sequences
+
+  # Layout component (simplified)
+  layout:
+    max_elements: 16 # Fewer elements per layout
+    geometric_dim: 32
+    class_vocab_size: 50
+
+  # Diffusion settings
+  diffusion:
+    timesteps: 100 # Reduced from 1000
+    beta_start: 0.0001
+    beta_end: 0.02
+
+training:
+  # Conservative training for small dataset
+  batch_size: 4 # Small batches
+  learning_rate: 1e-4
+  weight_decay: 0.01
+  epochs: 100
+  warmup_steps: 100
+
+  # Aggressive regularization to prevent overfitting
+  dropout: 0.3
+  label_smoothing: 0.1
+  gradient_clip: 1.0
+
+  # Data augmentation
+  augmentation:
+    rotation_range: 5 # Minimal augmentation
+    brightness_range: 0.1
+    contrast_range: 0.1
+
+validation:
+  split: 0.2
+  patience: 10 # Early stopping
+  min_delta: 0.001
+# Estimated model size: ~2-3M parameters
+# Memory usage: ~200-300MB
+# Training time: ~10-15 seconds per epoch

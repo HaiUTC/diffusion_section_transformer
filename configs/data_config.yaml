@@ -1,0 +1,40 @@
+# Data Configuration for Section Layout Generation
+
+dataset:
+  root_path: "path/to/your/dataset"
+  splits:
+    train: 0.8
+    val: 0.1
+    test: 0.1
+
+transforms:
+  image:
+    target_size: 512
+    patch_size: 16
+    center_crop: true
+    normalize: true
+    padding_mode: "constant"
+
+  structure:
+    max_sequence_length: 512
+    mask_probability: 0.15
+    pad_token_id: 0
+    mask_token_id: 1
+
+  layout:
+    max_sequence_length: 256
+    label_smoothing: 0.1
+    pad_token_id: 0
+
+dataloader:
+  batch_size: 32
+  num_workers: 4
+  shuffle: true
+  pin_memory: true
+
+augmentation:
+  apply_probability: 0.5
+  brightness: 0.2
+  contrast: 0.2
+  saturation: 0.2
+  hue: 0.1

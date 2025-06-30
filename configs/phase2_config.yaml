@@ -1,0 +1,60 @@
+# Phase 2 Configuration (2500-5000 dataset)
+# Small but capable model with improved capacity
+
+model:
+  # Increased model size for better performance
+  d_model: 192
+  n_heads: 6
+  n_layers: 6
+  dropout: 0.15
+
+  # Vision component
+  vision:
+    patch_size: 16 # Standard patches
+    image_size: 224
+    channels: 3
+
+  # Structure component
+  structure:
+    vocab_size: 4000 # Expanded vocabulary
+    max_length: 512 # Longer sequences
+
+  # Layout component
+  layout:
+    max_elements: 24 # More elements per layout
+    geometric_dim: 48
+    class_vocab_size: 100
+
+  # Diffusion settings
+  diffusion:
+    timesteps: 200 # Increased steps
+    beta_start: 0.0001
+    beta_end: 0.02
+
+training:
+  # Balanced training for medium dataset
+  batch_size: 8
+  learning_rate: 5e-5
+  weight_decay: 0.005
+  epochs: 150
+  warmup_steps: 200
+
+  # Moderate regularization
+  dropout: 0.2
+  label_smoothing: 0.05
+  gradient_clip: 1.0
+
+  # Enhanced data augmentation
+  augmentation:
+    rotation_range: 10
+    brightness_range: 0.15
+    contrast_range: 0.15
+    horizontal_flip: 0.2
+
+validation:
+  split: 0.15
+  patience: 15
+  min_delta: 0.0005
+# Estimated model size: ~8-12M parameters
+# Memory usage: ~400-600MB
+# Training time: ~20-30 seconds per epoch
