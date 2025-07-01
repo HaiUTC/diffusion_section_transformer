@@ -1,0 +1,13 @@
+{
+  "section@header.section_header44@div.padding-global@div.container-large@div.padding-section-large@div.max-width-large": {
+    "wrapper@div.margin-bottom.margin-xsmall": {
+      "heading@div.text-weight-semibold": ""
+    },
+    "wrapper@div.margin-bottom.margin-small": { "heading@h1.xbri_mcbq2": "" },
+    "paragraph@p.text-size-medium": "",
+    "wrapper@div.margin-top.margin-medium@div.button-group['d:flex']": {
+      "button@a.button.w-button": "",
+      "button@a.button.is-secondary.w-button": ""
+    }
+  }
+}

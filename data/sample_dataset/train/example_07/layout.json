@@ -1,0 +1,43 @@
+{
+  "header.section_header17": {
+    "div.padding-global": {
+      "div.container-large": {
+        "div.padding-section-large": {
+          "div.header17_component": {
+            "div.margin-bottom.margin-xxlarge": {
+              "div.w-layout-grid.header17_content-wrapper['d:grid']['col:2']": {
+                "div.header15_content-left": {
+                  "h1.heading-style-h1": {
+                    "text": "Medium length hero heading goes here"
+                  }
+                },
+                "div.header15_content-right": {
+                  "p.text-size-medium": {
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+                  },
+                  "div.margin-top.margin-medium": {
+                    "div.button-group['d:flex']": {
+                      "a.button.w-button": { "text": "Button" },
+                      "a.button.is-secondary.w-button": { "text": "Button" }
+                    }
+                  }
+                }
+              }
+            },
+            "a.header17_lightbox.w-inline-block.w-lightbox": {
+              "img.header17_lightbox-image": {
+                "src": "https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316216244aee67_Placeholder%20Video%20-%20Landscape.svg"
+              },
+              "div.lightbox-play-icon['p:absolute']['zIndex:2']['d:flex']": {
+                "div.icon-embed-large.w-embed['d:flex']": {
+                  "svg.xbri_mcbq2": { "svg": "svg-extractor" }
+                }
+              },
+              "div.video-overlay-layer['p:absolute']['zIndex:1']": {}
+            }
+          }
+        }
+      }
+    }
+  }
+}

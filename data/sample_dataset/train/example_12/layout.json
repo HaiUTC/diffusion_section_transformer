@@ -1,0 +1,19 @@
+{
+  "section@header.section_header28@div.padding-global@div.container-large@div.padding-section-large": {
+    "wrapper@div.header28_component": {
+      "wrapper@div.margin-bottom.margin-xxlarge@div.text-align-center@div.max-width-large.align-center": {
+        "wrapper@div.margin-bottom.margin-small": {
+          "heading@h1.heading-style-h1": "",
+          "paragraph@p.text-size-medium": ""
+        },
+        "wrapper@div.margin-top.margin-medium@div.button-group.is-center['d:flex']": {
+          "button@a.button.w-button": "",
+          "button@a.button.is-secondary.w-button": ""
+        }
+      },
+      "wrapper@a.header28_lightbox.w-inline-block.w-lightbox": {
+        "video@img.header28_lightbox-image": {}
+      }
+    }
+  }
+}

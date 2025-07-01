@@ -1,0 +1,25 @@
+{
+  "section@header.section_header40": {
+    "grid@div.w-layout-grid.header40_component": {
+      "column$1": {
+        "wrapper@div.header40_content#w-node-_2d37dac1-13fb-f03f-ad49-218dd6bdc3ab-e56967b2": {
+          "wrapper@div.margin-bottom.margin-small": {
+            "heading@h1.heading-style-h1": ""
+          },
+          "paragraph@p.text-size-medium": "",
+          "wrapper@div.margin-top.margin-medium": {
+            "wrapper@div.button-group": {
+              "button@a.button.w-button": "",
+              "button@a.button.is-secondary.w-button": ""
+            }
+          }
+        }
+      },
+      "column$2": {
+        "wrapper@a.header40_lightbox.w-inline-block.w-lightbox": {
+          "video@img.header40_lightbox-image": {}
+        }
+      }
+    }
+  }
+}

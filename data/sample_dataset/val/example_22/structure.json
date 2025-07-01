@@ -1,0 +1,39 @@
+{
+  "header.section_header120": {
+    "div.padding-global": {
+      "div.container-large": {
+        "div.padding-section-large": {
+          "div.header120_component": {
+            "div.margin-bottom.margin-xxlarge": {
+              "div.w-layout-grid.header120_content-wrapper['d:grid']['col:2']": {
+                "div.header120_content-left['d:flex']": {
+                  "h1.xbri_mcbq2": {
+                    "text": "Medium length hero heading goes here"
+                  }
+                },
+                "div.header120_content-right#w-node-ccc0fccd-335b-b268-aac4-7c93b63adae3-ba9e842d['d:flex']": {
+                  "p.text-size-medium": {
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+                  },
+                  "div.margin-top.margin-medium": {
+                    "div.button-group['d:flex']": {
+                      "a.button.w-button": { "text": "Button" },
+                      "a.button.is-secondary.w-button": { "text": "Button" }
+                    }
+                  }
+                }
+              }
+            },
+            "div.header120_image-group['d:flex']": {
+              "div.header120_image-wrapper": {
+                "img.header120_image": {
+                  "src": "https://assets-global.website-files.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

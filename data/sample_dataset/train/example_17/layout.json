@@ -1,0 +1,23 @@
+{
+  "section@header.section_header41": {
+    "grid@div.w-layout-grid.header41_component": {
+      "column$1": {
+        "wrapper@a.header41_lightbox.w-inline-block.w-lightbox": {
+          "video@img.header41_lightbox-image": {}
+        }
+      },
+      "column$2": {
+        "wrapper@div.header41_content#w-node-_6f56f98b-1118-5103-ecbc-07e30c487302-e56967b2": {
+          "wrapper@div.margin-bottom.margin-small": {
+            "heading@h1.heading-style-h1": ""
+          },
+          "paragraph@p.text-size-medium": "",
+          "wrapper@div.margin-top.margin-medium@div.button-group['d:flex']": {
+            "button@a.button.w-button": "",
+            "button@a.button.is-secondary.w-button": ""
+          }
+        }
+      }
+    }
+  }
+}

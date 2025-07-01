@@ -581,18 +581,69 @@ def validate_dataset(
     save_report: bool = True
 ) -> DatasetValidationReport:
     """
-    Convenience function to validate dataset.
+    Main entry point for dataset validation.
     
     Args:
-        base_data_dir: Base directory containing dataset
-        save_report: Whether to save validation report
+        base_data_dir: Base directory containing the dataset
+        save_report: Whether to save validation report to file
         
     Returns:
-        Validation report
+        DatasetValidationReport: Complete validation report
     """
-    from .filesystem_layout import FilesystemLayoutManager
-    
+    # Initialize filesystem manager
     filesystem_manager = FilesystemLayoutManager(base_data_dir)
+    
+    # Initialize validator
     validator = DatasetValidator(filesystem_manager)
     
-    return validator.run_full_validation(save_report=save_report)
+    # Run validation
+    report = validator.run_full_validation(save_report=save_report)
+    
+    return report
+
+
+def generate_dataset_report(dataset_dir: str) -> str:
+    """
+    Generate a simple text report for dataset validation (legacy mode).
+    
+    Args:
+        dataset_dir: Path to dataset directory
+        
+    Returns:
+        str: Formatted validation report
+    """
+    try:
+        # Run validation
+        report = validate_dataset(dataset_dir, save_report=False)
+        
+        # Format report as text
+        text_report = f"""
+📊 Dataset Validation Report
+============================
+Dataset: {dataset_dir}
+Date: {report.validation_date}
+
+📈 Summary:
+- Total Examples: {report.total_examples:,}
+- Overall Score: {report.overall_score:.1%}
+- Splits: {', '.join([f"{k}: {v}" for k, v in report.splits.items()])}
+
+🔍 Validation Results:
+"""
+        
+        for result in report.validation_results:
+            status = "✅ PASS" if result.passed else "❌ FAIL"
+            text_report += f"- {result.check_name}: {status} (Score: {result.score:.1%})\n"
+            
+            if result.errors:
+                text_report += f"  Errors: {len(result.errors)}\n"
+            if result.warnings:
+                text_report += f"  Warnings: {len(result.warnings)}\n"
+        
+        # Add summary
+        text_report += f"\n📋 Summary:\n{report.summary.get('overview', 'No overview available')}\n"
+        
+        return text_report
+        
+    except Exception as e:
+        return f"❌ Error generating validation report: {e}"

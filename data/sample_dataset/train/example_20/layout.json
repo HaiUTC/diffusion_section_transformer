@@ -1,0 +1,36 @@
+{
+  "section@section.section_layout2@div.padding-global@div.container-large@div.padding-section-large": {
+    "grid@div.w-layout-grid.layout2_component['d:grid']['col:2']": {
+      "column$1": {
+        "wrapper@div.layout2_content": {
+          "wrapper@div.margin-bottom.margin-xsmall": {
+            "heading@div.text-weight-semibold": ""
+          },
+          "wrapper@div.margin-bottom.margin-small": {
+            "heading@h2.xbri_mcbq2": ""
+          },
+          "paragraph@p.text-size-medium": "",
+          "wrapper@div.margin-top.margin-medium@div.button-group['d:flex']": {
+            "button@a.button.is-secondary.w-button": "",
+            "button@a.button.is-link.is-icon.w-inline-block@div.xbri_mcbq2": {
+              "icon@div.icon-embed-xxsmall.w-embed['d:flex']@svg.xbri_mcbq2": ""
+            }
+          }
+        }
+      },
+      "column$2": {
+        "wrapper@a.layout2_lightbox.w-inline-block.w-lightbox": {
+          "image@img.layout2_lightbox-image": "",
+          "freedom$1": {
+            "wrapper@div.lightbox-play-icon['p:absolute']['zIndex:2']['d:flex']@div.icon-embed-large.w-embed['d:flex']": {
+              "icon@svg.xbri_mcbq2": ""
+            }
+          },
+          "freedom$2": {
+            "divider@div.video-overlay-layer['p:absolute']['zIndex:1']": ""
+          }
+        }
+      }
+    }
+  }
+}

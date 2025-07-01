@@ -1,0 +1,45 @@
+{
+  "header.section_header86": {
+    "div.padding-global": {
+      "div.container-large": {
+        "div.padding-section-medium": {
+          "div.w-layout-grid.header86_component['d:grid']['col:1']": {
+            "div.w-layout-grid.header86_card['d:grid']['col:2']": {
+              "div.header86_card-content['d:flex']": {
+                "div.header86_card-content-top": {
+                  "div.margin-bottom.margin-small": {
+                    "h1.xbri_mcbq2": {
+                      "text": "Medium length hero heading goes here"
+                    }
+                  },
+                  "p.text-size-medium": {
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+                  }
+                },
+                "div.margin-top.margin-medium": {
+                  "div.button-group['d:flex']": {
+                    "a.button.w-button": { "text": "Button" },
+                    "a.button.is-secondary.w-button": { "text": "Button" }
+                  }
+                }
+              },
+              "div.header86_lightbox-wrapper['d:flex']": {
+                "a.header86_lightbox.w-inline-block.w-lightbox": {
+                  "img.header86_lightbox-image": {
+                    "src": "https://assets-global.website-files.com/624380709031623bfe4aee60/6243807090316259584aee68_placeholder-video-thumbnail.svg"
+                  },
+                  "div.lightbox-play-icon['p:absolute']['zIndex:2']['d:flex']": {
+                    "div.icon-embed-large.w-embed['d:flex']": {
+                      "svg.xbri_mcbq2": { "svg": "svg-extractor" }
+                    }
+                  },
+                  "div.video-overlay-layer['p:absolute']['zIndex:1']": {}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "header.section_header5.text-color-alternate": {
+    "div.padding-global": {
+      "div.container-large": {
+        "div.header5_content['d:flex']": {
+          "div.padding-section-large": {
+            "div.max-width-medium": {
+              "div.margin-bottom.margin-small": {
+                "h1.heading-style-h1": {
+                  "text": "Medium length hero heading goes here"
+                }
+              },
+              "p.text-size-medium": {
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+              },
+              "div.margin-top.margin-medium": {
+                "div.button-group['d:flex']": {
+                  "a.button.is-alternate.w-button": { "text": "Button" },
+                  "a.button.is-secondary.is-alternate.w-button": {
+                    "text": "Button"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "div.header5_background-image-wrapper": {
+      "div.image-overlay-layer['p:absolute']['zIndex:1']": {},
+      "img.header5_background-image": {
+        "src": "https://cdn.prod.website-files.com/624380709031623bfe4aee60/6243807090316203124aee66_placeholder-image.svg"
+      }
+    }
+  }
+}

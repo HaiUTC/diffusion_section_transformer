@@ -1,0 +1,16 @@
+{
+  "section@header.section_header96@div.padding-global@div.container-large@div.padding-section-medium": {
+    "grid@div.w-layout-grid.header96_component['d:grid']['col:1']": {
+      "column": {
+        "wrapper@div.header96_card['d:flex']@div.max-width-large@div.text-align-center@div.margin-bottom.margin-small": {
+          "heading@h1.xbri_mcbq2": "",
+          "paragraph@p.text-size-medium": ""
+        },
+        "wrapper@div.margin-top.margin-medium@div.button-group.is-center['d:flex']": {
+          "button@a.button.w-button": "",
+          "button@a.button.is-secondary.w-button": ""
+        }
+      }
+    }
+  }
+}

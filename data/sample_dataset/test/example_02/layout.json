@@ -1,0 +1,23 @@
+{
+  "section@header.section_header3@div.padding-global@div.container-large@div.padding-section-large@div.header3_component": {
+    "grid@div.w-layout-grid.header3_content['d:grid']['col:2']": {
+      "column$1": {
+        "wrapper@div.header3_content-left": {
+          "wrapper@div.margin-bottom.margin-small": {
+            "heading@h1.heading-style-h1": ""
+          },
+          "paragraph@p.text-size-medium": "",
+          "wrapper@div.margin-top.margin-medium@div.button-group['d:flex']": {
+            "button@a.button.w-button": "",
+            "button@a.button.is-secondary.w-button": ""
+          }
+        }
+      },
+      "column$2": {
+        "wrapper@a.header3_lightbox.w-inline-block.w-lightbox": {
+          "video@img.header3_lightbox-image": {}
+        }
+      }
+    }
+  }
+}

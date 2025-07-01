@@ -798,3 +798,284 @@ Where:
 <sub>Phase 4</sub>: 85/10/5 split with hold-out test sets for final evaluation
 
 This comprehensive training strategy ensures optimal performance across all dataset scales while leveraging the latest advances in few-shot learning, curriculum training, and multimodal optimization. Each phase builds upon proven techniques while adapting to the specific constraints and opportunities presented by different data availability scenarios.
+
+## Step 6: Evaluation Metrics & Performance Assessment
+
+With the training strategies established, we now design a comprehensive evaluation framework that adapts to different dataset sizes while providing robust performance assessment across multiple dimensions. This framework incorporates the latest advances in layout generation evaluation, multimodal AI assessment, and user interface quality metrics.
+
+### Phase 1: Micro-Scale Evaluation (2,000 Samples)
+
+<sub>Core Metrics for Small Dataset</sub>:
+
+- <sub>Layout Structural Accuracy:</sub> Measures correctness of element mapping and @ concatenation syntax
+
+- <sub>Visual Consistency Score:</sub> Evaluates alignment between generated layout and original screenshot
+
+- <sub>Element Combination Precision:</sub> Assesses accuracy of compound element generation (e.g., wrapper@div.class1@div.class2)
+
+<sub>Quantitative Metrics</sub>:
+
+- <sub>Exact Match Accuracy:</sub> Percentage of perfectly generated layouts
+
+- <sub>Element-wise F1 Score:</sub> Precision and recall for individual layout elements
+
+- <sub>Syntax Validation Rate:</sub> Correctness of @ concatenation and props assignment
+
+<sub>Validation Strategy</sub>:
+
+- <sub>5-fold cross-validation with stratified sampling</sub> to maximize training data utilization
+
+- <sub>Bootstrap resampling for confidence interval estimation on small samples</sub>
+
+- <sub>Leave-one-out validation for critical layout patterns</sub>
+
+### Phase 2: Small-Scale Evaluation (5,000-10,000 Samples)
+
+<sub>Enhanced Structural Metrics</sub>:
+
+- <sub>Layout Alignment Score:</sub> Measures spatial alignment of generated elements
+
+- <sub>Density Optimization:</sub> Evaluates optimal element distribution and spacing
+
+- <sub>Hierarchical Consistency:</sub> Assesses preservation of HTML structure relationships
+
+<sub>Aesthetic Quality Assessment</sub>:
+
+- <sub>Overlap Minimization:</sub> Measures element overlap using IoU-based penalties
+
+- <sub>Balance Score:</sub> Evaluates visual balance using center-of-mass calculations
+
+- <sub>Grouping Coherence:</sub> Assesses logical grouping of related elements
+
+<sub>Multimodal Alignment</sub>:
+
+- <sub>Cross-Modal Consistency:</sub> Measures alignment between visual and structural features
+
+- <sub>Feature Correlation Score:</sub> Evaluates correspondence between screenshot patches and HTML elements
+
+- <sub>Modality Gap Analysis:</sub> Assesses similarity between visual and structural representations
+
+### Phase 3: Medium-Scale Evaluation (25,000-100,000 Samples)
+
+<sub>Diffusion-Specific Metrics</sub>:
+
+- <sub>Fréchet Inception Distance (FID):</sub> Measures distribution similarity between generated and real layouts
+
+- <sub>Inception Score (IS):</sub> Evaluates layout quality and diversity
+
+- <sub>Layout Transportation Similarity (LTSim):</sub> Novel metric using optimal transport for flexible element matching
+
+<sub>Advanced Layout Quality</sub>:
+
+- <sub>Structural Similarity Index (SSIM):</sub> Measures layout structural similarity
+
+- <sub>Learned Perceptual Layout Similarity (LPLS):</sub> Adapts LPIPS for layout assessment
+
+- <sub>Aesthetic Harmony Score:</sub> Comprehensive aesthetic evaluation using multiple design principles
+
+<sub>Benchmark Comparison</sub>:
+
+- <sub>Standard Dataset Evaluation:</sub> Performance on LayoutGAN, NDN, and PubLayNet benchmarks
+
+- <sub>Cross-Domain Generalization:</sub> Evaluation across different website categories
+
+- <sub>Scalability Assessment:</sub> Performance degradation analysis with increasing complexity
+
+### Phase 4: Large-Scale Evaluation (100,000+ Samples)
+
+<sub>Production-Ready Metrics</sub>:
+
+- <sub>Layout Generation Quality (LGQ):</sub> Comprehensive metric combining structural, aesthetic, and functional aspects
+
+- <sub>User Experience Prediction:</sub> Correlation with actual user satisfaction ratings
+
+- <sub>Business Impact Assessment:</sub> Conversion rate and engagement metrics correlation
+
+<sub>Comprehensive Evaluation Suite</sub>:
+
+```python
+class LayoutEvaluationSuite:
+    def __init__(self):
+        self.structural_metrics = [
+            'alignment_score', 'density_optimization',
+            'overlap_minimization', 'balance_score'
+        ]
+        self.aesthetic_metrics = [
+            'visual_harmony', 'color_consistency',
+            'typography_coherence', 'spacing_rhythm'
+        ]
+        self.functional_metrics = [
+            'navigation_efficiency', 'accessibility_score',
+            'responsive_compatibility', 'load_impact'
+        ]
+```
+
+### 6.2 Automated Evaluation Pipeline
+
+<sub>Structural Assessment Module</sub>
+
+Alignment Evaluation:
+
+- <sub>Grid Alignment Score:</sub> Measures adherence to implicit grid structures
+
+- <sub>Edge Alignment Ratio:</sub> Evaluates alignment along common edges
+
+- <sub>Whitespace Distribution:</sub> Assesses balanced use of negative space
+
+- <sub>Element Relationship Analysis:</sub>
+
+- <sub>Proximity Coherence:</sub> Evaluates logical grouping based on spatial proximity
+
+- <sub>Semantic Clustering:</sub> Measures grouping of semantically related elements
+
+- <sub>Visual Hierarchy Score:</sub> Assesses clear information hierarchy
+
+<sub>Visual Quality Assessment</sub>
+
+<sub>Automated Aesthetic Scoring</sub>
+
+- <sub>Symmetry Detection:</sub> Measures bilateral and radial symmetry
+
+- <sub>Color Harmony Analysis:</sub> Evaluates color scheme coherence
+
+- <sub>Typography Consistency:</sub> Assesses font usage and text hierarchy
+
+<sub>Layout Density Optimization</sub>
+
+- <sub>Information Density Score:</sub> Balances content richness with visual clarity
+
+- <sub>Breathing Room Ratio:</sub> Measures adequate whitespace provision
+
+- <sub>Element Size Consistency:</sub> Evaluates proportional relationships
+
+<sub>Multimodal Consistency Evaluation</sub>
+
+- <sub>Cross-Modal Alignment:</sub>
+
+- <sub>Visual-Structural Correspondence:</sub> Measures alignment between image patches and HTML elements
+
+- <sub>Semantic Consistency Score:</sub> Evaluates preservation of semantic relationships
+
+- <sub>Context Preservation:</sub> Assesses maintenance of original design intent
+
+- <sub>Feature Correlation Analysis:</sub>
+
+- <sub>Attention Map Similarity:</sub> Compares visual attention patterns
+
+- <sub>Structural Embedding Alignment:</sub> Measures correspondence in feature space
+
+- <sub>Cross-Modal Retrieval Accuracy:</sub> Evaluates bidirectional retrieval performance
+
+### 6.3 Human Evaluation Framework
+
+<sub>User Study Design</sub>
+
+<sub>Evaluation Dimensions</sub>:
+
+- <sub>Aesthetic Appeal:</sub> Visual attractiveness and design quality
+
+- <sub>Usability Perception:</sub> Ease of use and navigation clarity
+
+- <sub>Professional Quality:</sub> Suitability for production use
+
+- <sub>Brand Consistency:</sub> Alignment with design system principles
+
+<sub>Comparative Assessment</sub>:
+
+- <sub>Pairwise Comparisons:</sub> Side-by-side layout quality evaluation
+
+- <sub>Ranking Tasks:</sub> Ordering layouts by preference
+
+- <sub>Likert Scale Ratings:</sub> Quantitative assessment across multiple dimensions
+
+<sub>Expert Evaluation Protocol</sub>
+
+<sub>Design Professional Assessment</sub>:
+
+- <sub>Technical Accuracy:</sub> Correctness of layout implementation
+
+- <sub>Design Principles Adherence:</sub> Following established design guidelines
+
+- <sub>Responsive Design Quality:</sub> Cross-device compatibility assessment
+
+- <sub>Accessibility Compliance:</sub> WCAG guideline adherence
+
+<sub>Evaluation Methodology</sub>:
+
+- <sub>VISQUAL Framework:</sub> Structured assessment using validated scales
+
+- <sub>Heuristic Evaluation:</sub> Systematic usability assessment
+
+- <sub>Design Critique Sessions:</sub> Qualitative feedback collection
+
+### 6.4 Performance Benchmarking
+
+<sub>Computational Efficiency Metrics</sub>
+
+<sub>Generation Speed Assessment</sub>:
+
+- <sub>Inference Time:</sub> Time per layout generation
+
+- <sub>Throughput:</sub> Layouts generated per second
+
+- <sub>Memory Usage:</sub> Peak memory consumption during generation
+
+- <sub>Scalability Profile:</sub> Performance degradation with complexity
+
+- <sub>Quality-Speed Trade-offs:</sub>
+
+- <sub>Pareto Frontier Analysis:</sub> Optimal quality-speed configurations
+
+- <sub>Adaptive Quality Scaling:</sub> Dynamic quality adjustment based on requirements
+
+- <sub>Real-time Capability:</sub> Sub-second generation feasibility
+
+<sub>Comparison with State-of-the-Art</sub>
+
+<sub>Benchmark Performance</sub>:
+
+- <sub>LayoutGAN Comparison:</sub> Performance on established benchmarks
+
+- <sub>DLT Baseline:</sub> Comparison with Diffusion Layout Transformer
+
+<sub>Commercial Tool Evaluation</sub>: Performance against industry solutions
+
+<sub>Ablation Studies</sub>:
+
+- <sub>Component Contribution Analysis:</sub> Individual module performance impact
+
+- <sub>Architecture Sensitivity:</sub> Performance variation with design choices
+
+- <sub>Dataset Size Impact:</sub> Quality improvement with increasing data
+
+### 6.5 Continuous Evaluation Strategy
+
+<sub>Automated Monitoring</sub>
+
+<sub>Production Metrics</sub>:
+
+- <sub>Layout Quality Drift:</sub> Monitoring quality degradation over time
+
+- <sub>User Satisfaction Tracking:</sub> Correlation with actual usage patterns
+
+- <sub>Error Rate Analysis:</sub> Failure mode identification and frequency
+
+<sub>Feedback Integration</sub>:
+
+- <sub>User Feedback Loop:</sub> Continuous improvement based on user input
+
+- <sub>Designer Feedback:</sub> Professional assessment integration
+
+- <sub>A/B Testing Framework:</sub> Comparative performance evaluation
+
+<sub>Model Performance Tracking</sub>
+
+<sub>Longitudinal Assessment</sub>:
+
+- <sub>Performance Stability:</sub> Consistency across different input types
+
+- <sub>Generalization Capability:</sub> Performance on unseen design patterns
+
+- <sub>Domain Adaptation:</sub> Effectiveness across different website categories
+
+This comprehensive evaluation framework ensures robust performance assessment across all development phases while providing actionable insights for continuous improvement. The multi-dimensional approach captures both quantitative performance metrics and qualitative user experience factors essential for practical deployment.

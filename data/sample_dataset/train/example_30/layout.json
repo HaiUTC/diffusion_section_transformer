@@ -1,0 +1,31 @@
+{
+  "section@header.section_header84@div.padding-global@div.container-large@div.padding-section-medium": {
+    "grid@div.w-layout-grid.header84_component": {
+      "column": {
+        "grid@div.w-layout-grid.header84_card": {
+          "column$1": {
+            "wrapper@div.header84_card-content": {
+              "wrapper@div.header84_card-content-top": {
+                "wrapper@div.margin-bottom.margin-small": {
+                  "heading@h1.xbri_mcbq2": "",
+                  "paragraph@p.text-size-medium": ""
+                }
+              },
+              "wrapper@div.margin-top.margin-medium": {
+                "wrapper@div.button-group": {
+                  "button@a.button.w-button": "",
+                  "button@a.button.is-secondary.w-button": ""
+                }
+              }
+            }
+          },
+          "column$2": {
+            "wrapper@div.header84_image-wrapper": {
+              "image@img.header84_image": ""
+            }
+          }
+        }
+      }
+    }
+  }
+}

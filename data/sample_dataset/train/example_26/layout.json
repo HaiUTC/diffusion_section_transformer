@@ -1,0 +1,34 @@
+{
+  "section@header.section_header94@div.padding-global@div.container-large@div.padding-section-medium": {
+    "grid@div.w-layout-grid.header94_component": {
+      "column": {
+        "grid@div.w-layout-grid.header94_card": {
+          "column$1": {
+            "wrapper@div.header94_lightbox-wrapper#w-node-_42fad17f-e6a2-4832-aebe-17d67640dfc3-e56967b3": {
+              "wrapper@a.header94_lightbox.w-inline-block.w-lightbox": {
+                "image@img.header94_lightbox-image": {},
+                "wrapper@div.lightbox-play-icon['p:absolute']['zIndex:2']['d:flex']@div.icon-embed-large.w-embed['d:flex']": {
+                  "icon@svg.xbri_mcbq2": {}
+                }
+              }
+            }
+          },
+          "column$2": {
+            "wrapper@div.header94_card-content['d:flex']": {
+              "wrapper@div.header94_card-content-top": {
+                "wrapper@div.margin-bottom.margin-small": {
+                  "heading@h1.xbri_mcbq2": ""
+                },
+                "paragraph@p.text-size-medium": ""
+              },
+              "wrapper@div.margin-top.margin-medium@div.button-group['d:flex']": {
+                "button@a.button.w-button": "",
+                "button@a.button.is-secondary.w-button": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

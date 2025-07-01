@@ -1,0 +1,27 @@
+{
+  "section@header.section_header15@div.padding-global@div.container-large@div.padding-section-large": {
+    "wrapper@div.header15_component": {
+      "wrapper@div.margin-bottom.margin-xxlarge": {
+        "grid@div.w-layout-grid.header15_content-wrapper": {
+          "column$1": {
+            "wrapper@div.header15_content-left": {
+              "heading@h1.heading-style-h1": ""
+            }
+          },
+          "column$2": {
+            "wrapper@div.header15_content-right": {
+              "paragraph@p.text-size-medium": "",
+              "wrapper@div.margin-top.margin-medium": {
+                "wrapper@div.button-group": {
+                  "button@a.button.w-button": "",
+                  "button@a.button.is-secondary.w-button": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "wrapper@div.header15_image-wrapper": { "image@img.header15_image": "" }
+    }
+  }
+}

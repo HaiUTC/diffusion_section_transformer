@@ -1,0 +1,30 @@
+{
+  "header.section_header23": {
+    "div.padding-global": {
+      "div.container-large": {
+        "div.padding-section-large": {
+          "div.header23_component": {
+            "div.text-align-center": {
+              "div.max-width-large.align-center": {
+                "div.margin-bottom.margin-small": {
+                  "h1.heading-style-h1": {
+                    "text": "Medium length hero heading goes here"
+                  }
+                },
+                "p.text-size-medium": {
+                  "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."
+                },
+                "div.margin-top.margin-medium": {
+                  "div.button-group.is-center['d:flex']": {
+                    "a.button.w-button": { "text": "Button" },
+                    "a.button.is-secondary.w-button": { "text": "Button" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

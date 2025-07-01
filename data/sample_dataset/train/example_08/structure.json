@@ -1,0 +1,27 @@
+{
+  "section@header.section_header19@div.padding-global@div.container-large@div.padding-section-large": {
+    "wrapper@div.header19_component": {
+      "grid@div.w-layout-grid.header19_content": {
+        "column$1": {
+          "wrapper@div.header19_image-wrapper": {
+            "image@img.header19_image": ""
+          }
+        },
+        "column$2": {
+          "wrapper@div.header19_content-right#w-node-aea6d845-d54c-7f3d-ac3d-5c7e016e435d-e56967b2": {
+            "wrapper@div.margin-bottom.margin-small": {
+              "heading@h1.heading-style-h1": ""
+            },
+            "paragraph@p.text-size-medium": "",
+            "wrapper@div.margin-top.margin-medium": {
+              "wrapper@div.button-group": {
+                "button@a.button.w-button": "",
+                "button@a.button.is-secondary.w-button": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

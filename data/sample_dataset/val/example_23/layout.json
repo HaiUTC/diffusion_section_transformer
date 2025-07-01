@@ -1,0 +1,20 @@
+{
+  "section@header.section_header114@div.padding-global@div.container-large@div.header114_component['d:flex']@div.padding-section-large": {
+    "grid@div.header114_content-wrapper['d:grid']['col:2']": {
+      "column$1": {
+        "wrapper@div.header114_content-left['d:flex']": {
+          "heading@h1.text-color-white": "",
+          "wrapper@div.margin-top.margin-medium@div.button-group['d:flex']": {
+            "button@a.button.w-button": "",
+            "button@a.button.is-secondary.is-alternate.w-button": ""
+          }
+        }
+      },
+      "column$2": {
+        "wrapper@div.header114_content-right#w-node-_621003fe-86ed-5fb7-e7f9-1a3d37088919-ba9e842d['d:flex']": {
+          "paragraph@p.text-size-medium.text-color-white": ""
+        }
+      }
+    }
+  }
+}

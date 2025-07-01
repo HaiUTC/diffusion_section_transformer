@@ -1,0 +1,14 @@
+{
+  "section@header.section_header5.text-color-alternate@div.padding-global@div.container-large": {
+    "wrapper@div.header5_content['d:flex']@div.padding-section-large@div.max-width-medium": {
+      "wrapper@div.margin-bottom.margin-small": {
+        "heading@h1.heading-style-h1": ""
+      },
+      "paragraph@p.text-size-medium": "",
+      "wrapper@div.margin-top.margin-medium@div.button-group['d:flex']": {
+        "button@a.button.is-alternate.w-button": "",
+        "button@a.button.is-secondary.is-alternate.w-button": ""
+      }
+    }
+  }
+}
