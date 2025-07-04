@@ -101,6 +101,44 @@ unzip dataset.zip -d data/raw/
 
 **Option B: Create Dataset from Scratch**
 
+## Dataset Creation
+
+## Option 1: Convert from Hugging Face Dataset
+
+Use the new dataset creation script to convert a Hugging Face dataset:
+
+```bash
+# Convert from Hugging Face dataset
+python3 scripts/create_dataset.py \
+  --dataset_name "username/html-css-layout-dataset" \
+  --output_dir data/raw \
+  --num_samples 5000 \
+  --split_ratio 0.8,0.1,0.1
+
+# Convert with column mapping (if column names differ)
+python3 scripts/create_dataset.py \
+  --dataset_name "username/web-layouts" \
+  --output_dir data/raw \
+  --column_mapping image:screenshot html:structure css:layout \
+  --num_samples 1000
+
+# Convert from local dataset file
+python3 scripts/create_dataset.py \
+  --dataset_path /path/to/local/dataset.json \
+  --output_dir data/raw \
+  --split_ratio 0.7,0.15,0.15
+```
+
+**Expected Hugging Face Dataset Format:**
+
+- `screenshot`: PIL Image or image path
+- `structure`: JSON string/dict with HTML/CSS structure
+- `layout`: JSON string/dict with layout information
+
+## Option 2: Manual Dataset Creation
+
+Use the dataset creation pipeline for custom data:
+
 ```bash
 # Use the dataset creation pipeline
 python3 scripts/create_dataset.py \
