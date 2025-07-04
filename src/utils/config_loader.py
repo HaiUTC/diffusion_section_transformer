@@ -7,6 +7,7 @@ import yaml
 import os
 from typing import Dict, Any, Optional
 from dataclasses import dataclass
+from pathlib import Path
 
 
 @dataclass
@@ -47,8 +48,22 @@ class ValidationConfig:
 class PhaseConfigLoader:
     """Loads and manages phase-specific configurations."""
     
-    def __init__(self, config_dir: str = "configs"):
-        self.config_dir = config_dir
+    def __init__(self, config_dir: str = None):
+        if config_dir is None:
+            # Find project root by looking for specific files that exist in the project root
+            current_path = Path(__file__).resolve()
+            project_root = current_path
+            
+            # Walk up the directory tree to find the project root
+            while project_root.parent != project_root:
+                if (project_root / "configs").exists() and (project_root / "src").exists():
+                    break
+                project_root = project_root.parent
+            
+            self.config_dir = project_root / "configs"
+        else:
+            self.config_dir = Path(config_dir)
+        
         self.phase_configs = {}
         self._load_all_phases()
     
@@ -57,10 +72,13 @@ class PhaseConfigLoader:
         phases = ["phase1", "phase2", "phase3", "phase4"]
         
         for phase in phases:
-            config_path = os.path.join(self.config_dir, f"{phase}_config.yaml")
-            if os.path.exists(config_path):
+            config_path = self.config_dir / f"{phase}_config.yaml"
+            if config_path.exists():
                 with open(config_path, 'r') as f:
                     self.phase_configs[phase] = yaml.safe_load(f)
+                print(f"🔧 Loaded {phase} config from {config_path}")
+            else:
+                print(f"⚠️  Warning: {config_path} not found")
     
     def get_phase_by_dataset_size(self, dataset_size: int) -> str:
         """Determine phase based on dataset size."""

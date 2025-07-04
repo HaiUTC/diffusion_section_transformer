@@ -8,7 +8,7 @@ This script converts Hugging Face datasets to the expected training format:
 - Each example contains: screenshot.png, structure.json, layout.json
 
 Expected HuggingFace dataset format:
-- 'image': PIL Image or image path
+- 'screenshot': PIL Image or image path
 - 'structure': JSON string or dict containing HTML/CSS structure
 - 'layout': JSON string or dict containing layout information
 

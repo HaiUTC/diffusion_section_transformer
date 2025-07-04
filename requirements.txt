@@ -13,6 +13,7 @@ pyyaml>=6.0
 
 # Dataset Loading and Processing
 datasets>=2.14.0
+fsspec==2023.9.2
 huggingface-hub>=0.16.0
 
 # Training and Monitoring

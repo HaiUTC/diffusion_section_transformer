@@ -96,7 +96,7 @@ def validate_simple_dataset_structure(dataset_dir: str) -> dict:
 
 def main():
     parser = argparse.ArgumentParser(description='Dataset Validation Suite')
-    parser.add_argument('dataset_dir', help='Path to dataset directory')
+    parser.add_argument('--dataset_dir', help='Path to dataset directory')
     parser.add_argument('--report-only', action='store_true',
                        help='Generate report only (legacy mode)')
     parser.add_argument('--output_dir', '-o', help='Output directory for validation results')

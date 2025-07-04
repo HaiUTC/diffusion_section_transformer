@@ -334,6 +334,12 @@ class TrainingManager:
         # Update model embeddings to match exact data loader vocab sizes
         self._update_model_vocabulary_sizes(self.model, actual_structure_vocab_size, actual_layout_vocab_size)
     
+    def get_effective_batch_size(self):
+        """Get effective batch size prioritizing command line args over strategy config."""
+        if hasattr(self.args, 'batch_size') and self.args.batch_size is not None:
+            return self.args.batch_size
+        return self.strategy.config.batch_size
+    
     def create_simple_data_loaders(self):
         """Create data loaders for simple train/val/test directory structure."""
         
@@ -479,7 +485,7 @@ class TrainingManager:
         # Create data loaders
         train_loader = DataLoader(
             train_dataset,
-            batch_size=self.strategy.config.batch_size,
+            batch_size=self.get_effective_batch_size(),
             shuffle=True,
             num_workers=0,  # Avoid multiprocessing issues with local class
             pin_memory=True,
@@ -488,7 +494,7 @@ class TrainingManager:
         
         val_loader = DataLoader(
             val_dataset,
-            batch_size=self.strategy.config.batch_size,
+            batch_size=self.get_effective_batch_size(),
             shuffle=False,
             num_workers=0,  # Avoid multiprocessing issues with local class
             pin_memory=True
@@ -496,7 +502,7 @@ class TrainingManager:
         
         test_loader = DataLoader(
             test_dataset,
-            batch_size=self.strategy.config.batch_size,
+            batch_size=self.get_effective_batch_size(),
             shuffle=False,
             num_workers=0,  # Avoid multiprocessing issues with local class
             pin_memory=True
@@ -703,7 +709,7 @@ class TrainingManager:
                 # Forward pass
                 self.optimizer.zero_grad()
                 outputs = self.model(
-                    screenshots=batch['screenshot'],
+                    screenshot=batch['screenshot'],
                     structure_tokens=batch['structure_tokens'],
                     layout_tokens=batch['layout_tokens']
                 )
@@ -750,9 +756,9 @@ class TrainingManager:
         train_pbar.close()
         
         return {
-            'loss': epoch_loss / len(self.train_loader),
-            'layout_accuracy': layout_accuracy / samples_processed,
-            'element_precision': element_precision / samples_processed,
+            'loss': epoch_loss / max(1, len(self.train_loader)),
+            'layout_accuracy': layout_accuracy / max(1, samples_processed),
+            'element_precision': element_precision / max(1, samples_processed),
             'samples_processed': samples_processed
         }
     
@@ -782,7 +788,7 @@ class TrainingManager:
                     
                     # Forward pass
                     outputs = self.model(
-                        screenshots=batch['screenshot'],
+                        screenshot=batch['screenshot'],
                         structure_tokens=batch['structure_tokens'],
                         layout_tokens=batch['layout_tokens']
                     )
@@ -815,9 +821,9 @@ class TrainingManager:
         val_pbar.close()
         
         return {
-            'loss': val_loss / len(self.val_loader),
-            'layout_accuracy': layout_accuracy / samples_processed,
-            'element_precision': element_precision / samples_processed,
+            'loss': val_loss / max(1, len(self.val_loader)),
+            'layout_accuracy': layout_accuracy / max(1, samples_processed),
+            'element_precision': element_precision / max(1, samples_processed),
             'samples_processed': samples_processed
         }
     
